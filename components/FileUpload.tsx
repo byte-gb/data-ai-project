@@ -18,7 +18,7 @@ const FileUpload = () => {
         }) => {
             const response = await axios.post('/api/create-chat', {file_key, file_name});
             return response.data;
-        }
+        },
     });
 
     const {getRootProps, getInputProps} = useDropzone({
@@ -70,7 +70,7 @@ const FileUpload = () => {
                     <>
                         <Loader2 className='h-10 w-10 text-blue-500 animate-spin'></Loader2>
                         <p className='mt-2 text-sm text-slate-400'>
-                            
+                            Spilling tea to GPT...
                         </p>
                     </>
                 ) : (
